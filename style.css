@@ -1,0 +1,63 @@
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-size: 3rem;
+    margin-bottom: 25px;
+}
+h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    -webkit-filter: drop-shadow(5px 5px 5px rgba(240, 0, 100, 1));
+    filter: drop-shadow(5px 5px 5px rgba(240, 0, 100, 1));
+}
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: rgb(240, 0, 100);
+}
+.container {
+    background: #3c8ce9 url('./bg.jpg') no-repeat bottom center;
+    background-size: cover;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+}
+.container h3 {
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.countdown {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.container-day,
+.container-hour,
+.container-minute,
+.container-second {
+    text-align: center;
+    margin: 0 25px;
+}
