@@ -21,11 +21,23 @@ const countdown = () => {
     const formatTime = (time) => {
         return time < 10 ? (`0${time}`) : time;
     }
+    
+    const days = document.querySelector('.day');
+    const hours = document.querySelector('.hour');
+    const minutes = document.querySelector('.minute');
+    const seconds = document.querySelector('.second');
 
-    document.querySelector('.day').innerHTML = formatTime(textDay);
-    document.querySelector('.hour').innerHTML = formatTime(textHour);
-    document.querySelector('.minute').innerHTML = formatTime(textMinute);
-    document.querySelector('.second').innerHTML = formatTime(textSecond);
+    days.innerHTML = formatTime(textDay);
+    textDay === 1 ? days.nextElementSibling.textContent = 'Day' : days.nextElementSibling.textContent = 'Days';
+
+    hours.innerHTML = formatTime(textHour);
+    textHour === 1 ? hours.nextElementSibling.textContent = 'Hour' : hours.nextElementSibling.textContent = 'Hours';
+    
+    minutes.innerHTML = formatTime(textMinute);
+    textMinute === 1 ? minutes.nextElementSibling.textContent = 'Minute' : minutes.nextElementSibling.textContent = 'Minutes';
+
+    seconds.innerHTML = formatTime(textSecond);
+    textSecond === 1 ? seconds.nextElementSibling.textContent = 'Second' : seconds.nextElementSibling.textContent = 'Seconds'
 
     if (gap < 0) {
         newYear = `December 31, ${(new Date().getFullYear()) + 1} 00:00:00`;
